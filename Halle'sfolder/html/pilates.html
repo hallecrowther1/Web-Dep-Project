@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-1: #bfe6ff;
+            --blue-2: #a6d9ff;
+            --blue-3: #8fcdfd;
+            --light-text: #1f4964;
+            --soft-card: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 32px 20px 70px;
+            font-family: "Quicksand", sans-serif;
+            color: var(--light-text);
+            text-align: center;
+            background:
+                radial-gradient(circle at 12% 12%, #def3ff 0%, transparent 40%),
+                radial-gradient(circle at 88% 20%, #bde4ff 0%, transparent 36%),
+                linear-gradient(135deg, var(--blue-1), var(--blue-2), var(--blue-3));
+        }
+
+        h1, h2 {
+            margin-bottom: 8px;
+            font-family: "Pacifico", cursive;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+        }
+
+        p, a {
+            font-size: 1rem;
+        }
+
+        li {
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+        }
+
+        .site-tabs {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .menu-toggle {
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .menu-toggle summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.24);
+            color: var(--light-text);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .menu-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .menu-links {
+            position: absolute;
+            top: 58px;
+            right: 0;
+            min-width: 270px;
+            background: rgba(255, 255, 255, 0.26);
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 12px 24px rgba(90, 17, 61, 0.22);
+            z-index: 20;
+        }
+
+        .menu-links a {
+            display: block;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+
+        .menu-links a:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .menu-toggle[open] summary {
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .menu-toggle[open] .menu-links {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+        }
+
+        .workout-section {
+            max-width: 780px;
+            background: var(--soft-card);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin: 0 auto 14px;
+            backdrop-filter: blur(4px);
+        }
+
+        .workout-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-tabs">
+        <details class="menu-toggle">
+            <summary aria-label="Open site navigation menu">☰</summary>
+            <div class="menu-links">
+                <a href="../index.html">Home</a>
+                <a href="gym-excercises.html">Gym Excercises</a>
+                <a href="yoga.html">Yoga</a>
+                <a href="pilates.html">Pilates</a>
+                <a href="cute-fits.html">Cute Fits</a>
+                <a href="gym-workout-performance.html">Gym Workout Performance</a>
+                <a href="abs.html">ABS</a>
+            </div>
+        </details>
+    </nav>
+
+    <section class="workout-section">
+        <h1>Pilates Workout</h1>
+
+        <h2>Warm-Up (5 min)</h2>
+        <ul>
+            <li>Deep breathing while lying on your back</li>
+            <li>Shoulder rolls</li>
+            <li>Pelvic tilts</li>
+        </ul>
+
+        <h2>Pilates Exercises</h2>
+        <ul>
+            <li>The Hundred - 3 sets of 10–15 breaths</li>
+            <li>Roll-Up - 3 sets of 8–10 reps</li>
+            <li>Single-Leg Stretch - 3 sets of 10 reps each leg</li>
+            <li>Double-Leg Stretch - 3 sets of 8–10 reps</li>
+            <li>Leg Circles - 3 sets of 5 circles each leg (both directions)</li>
+            <li>Rolling Like a Ball - 3 sets of 8–10 reps</li>
+            <li>Plank with Leg Lift - 3 sets of 10 reps each leg</li>
+            <li>Side-Lying Leg Lifts - 3 sets of 10–12 reps each leg</li>
+            <li>Swimming - 3 sets of 20–30 seconds</li>
+        </ul>
+
+        <h2>Cool Down (3–5 min)</h2>
+        <ul>
+            <li>Spinal twist stretch</li>
+            <li>Child's pose</li>
+            <li>Deep breathing and relaxation</li>
+        </ul>
+
+        <h2>Tips</h2>
+        <ul>
+            <li>Move with control, don't rush.</li>
+            <li>Focus on your core and posture.</li>
+            <li>Breathe deeply and consistently throughout.</li>
+        </ul>
+
+        <div class="workout-image">
+            <img src="../assets/img/ChatGPT Image Apr 7, 2026, 01_45_26 PM.png" alt="Pilates Exercises">
+        </div>
+    </section>
+</body>
+</html>

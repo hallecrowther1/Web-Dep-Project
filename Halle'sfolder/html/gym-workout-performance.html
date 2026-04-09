@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Workout Performance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-1: #ff8ec7;
+            --pink-2: #ff5ca8;
+            --pink-3: #ff2f95;
+            --light-text: #3c1d3f;
+            --soft-card: rgba(255, 255, 255, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 32px 20px 70px;
+            font-family: "Quicksand", sans-serif;
+            color: var(--light-text);
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 10%, #ffd5ea 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, #ff90c8 0%, transparent 35%),
+                linear-gradient(135deg, var(--pink-1), var(--pink-2), var(--pink-3));
+        }
+
+        h1, h2 {
+            margin-bottom: 8px;
+            font-family: "Pacifico", cursive;
+            letter-spacing: 0.5px;
+        }
+
+        .site-tabs {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .menu-toggle {
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .menu-toggle summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.24);
+            color: var(--light-text);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .menu-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .menu-links {
+            position: absolute;
+            top: 58px;
+            right: 0;
+            min-width: 270px;
+            background: rgba(255, 255, 255, 0.26);
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 12px 24px rgba(90, 17, 61, 0.22);
+            z-index: 20;
+        }
+
+        .menu-links a {
+            display: block;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+
+        .menu-links a:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .menu-toggle[open] summary {
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .menu-toggle[open] .menu-links {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+        }
+
+        .dashboard-wrap {
+            max-width: 860px;
+            background: var(--soft-card);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 18px;
+            padding: 16px 18px;
+            margin: 0 auto;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-tabs">
+        <details class="menu-toggle">
+            <summary aria-label="Open site navigation menu">☰</summary>
+            <div class="menu-links">
+                <a href="../index.html">Home</a>
+                <a href="gym-excercises.html">Gym Excercises</a>
+                <a href="yoga.html">Yoga</a>
+                <a href="pilates.html">Pilates</a>
+                <a href="cute-fits.html">Cute Fits</a>
+                <a href="gym-workout-performance.html">Gym Workout Performance</a>
+                <a href="abs.html">ABS</a>
+            </div>
+        </details>
+    </nav>
+
+    <section class="dashboard-wrap">
+        <h1>Gym Workout Performance</h1>
+        <div class='tableauPlaceholder' id='viz1775763473137' style='position: relative'>
+            <noscript><a href='#'><img alt='Executive Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gy&#47;GymWorkoutPerformanceDashboard&#47;ExecutiveDashboard&#47;1_rss.png' style='border: none' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='GymWorkoutPerformanceDashboard&#47;ExecutiveDashboard' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gy&#47;GymWorkoutPerformanceDashboard&#47;ExecutiveDashboard&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+    </section>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1775763473137');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.minWidth = '420px';
+            vizElement.style.maxWidth = '650px';
+            vizElement.style.width = '100%';
+            vizElement.style.minHeight = '587px';
+            vizElement.style.maxHeight = '887px';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.minWidth = '420px';
+            vizElement.style.maxWidth = '650px';
+            vizElement.style.width = '100%';
+            vizElement.style.minHeight = '587px';
+            vizElement.style.maxHeight = '887px';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '977px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+</body>
+</html>

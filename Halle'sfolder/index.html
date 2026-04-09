@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halle's Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-1: #ff8ec7;
+            --pink-2: #ff5ca8;
+            --pink-3: #ff2f95;
+            --light-text: #3c1d3f;
+            --soft-card: rgba(255, 255, 255, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 32px 20px 70px;
+            font-family: "Quicksand", sans-serif;
+            color: var(--light-text);
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 10%, #ffd5ea 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, #ff90c8 0%, transparent 35%),
+                linear-gradient(135deg, var(--pink-1), var(--pink-2), var(--pink-3));
+        }
+
+        h1, h2 {
+            margin-bottom: 8px;
+            font-family: "Pacifico", cursive;
+            letter-spacing: 0.5px;
+        }
+
+        p, li, a {
+            font-size: 1.05rem;
+        }
+
+        ul {
+            background: var(--soft-card);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 16px;
+            padding: 16px 4px;
+            max-width: 340px;
+            backdrop-filter: blur(4px);
+            list-style: none;
+            padding-left: 0;
+        }
+
+        a {
+            color: var(--light-text);
+            font-weight: 700;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
+
+        .intro-message {
+            max-width: 760px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: 0 12px 30px rgba(124, 0, 67, 0.28);
+            margin: 18px auto 12px;
+        }
+
+        .site-tabs {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .menu-toggle {
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .menu-toggle summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.24);
+            color: var(--light-text);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .menu-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .menu-links {
+            position: absolute;
+            top: 58px;
+            right: 0;
+            min-width: 270px;
+            background: rgba(255, 255, 255, 0.26);
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 12px 24px rgba(90, 17, 61, 0.22);
+            z-index: 20;
+        }
+
+        .menu-links a {
+            display: block;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+
+        .menu-links a:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .menu-toggle[open] summary {
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .menu-toggle[open] .menu-links {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+        }
+
+        .heart-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 6px 18px rgba(60, 29, 63, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+
+        .heart-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(60, 29, 63, 0.3);
+        }
+
+        .heart-label {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            font-size: 0.8rem;
+            color: var(--light-text);
+            text-align: center;
+            z-index: 50;
+            white-space: nowrap;
+        }
+
+        .jokes-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 6px 18px rgba(60, 29, 63, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 50;
+        }
+
+        .jokes-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(60, 29, 63, 0.3);
+        }
+
+        .jokes-label {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            font-size: 0.8rem;
+            color: var(--light-text);
+            text-align: center;
+            z-index: 50;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-tabs">
+        <details class="menu-toggle">
+            <summary aria-label="Open site navigation menu">☰</summary>
+            <div class="menu-links">
+                <a href="index.html">Home</a>
+                <a href="Html/gym-excercises.html">Gym Excercises</a>
+                <a href="Html/yoga.html">Yoga</a>
+                <a href="Html/pilates.html">Pilates</a>
+                <a href="Html/cute-fits.html">Cute Fits</a>
+                <a href="Html/gym-workout-performance.html">Gym Workout Performance</a>
+                <a href="Html/abs.html">ABS</a>
+            </div>
+        </details>
+    </nav>
+    <h1 id="top">Gym Site</h1>  
+    <div class="intro-message">
+        <p>✨ Welcome to your happy place! ✨</p>
+        <p>Staying active every day isn’t just about looking cute in your workout gear (though that’s a bonus 😘)—it’s about feeling amazing inside and out. Daily exercise boosts your energy, keeps your body strong, and gives your mind a little sparkle of happiness. From lifting your mood to toning your muscles, moving your body every day is the ultimate self-care. Let’s get healthy, happy, and glowing—together! 💖</p>
+    </div>
+
+    <h2>Looking for Pre-Workout?</h2>
+    <a href="https://www.buckedup.com/?utm_medium=brandedsearch&utm_source=googlegg&utm_campaign={campaign}&utm_content=698887964347&utm_term=bucked%20up&utm_adgroup={adgroup}&utm_device=c&gad_source=1&gad_campaignid=21263608791&gbraid=0AAAAADRJ3TA3FaByp5SIoZ9CopCgRidGy&gclid=Cj0KCQjwp7jOBhDGARIsABe7C4eYGg5DM2eAwdWWeupbgQDW_vSXsNQto-YojsaIdXMjczufSThk3U4aAuCQEALw_wcB">Here's a link to bucked up</a>
+
+    <br><br><br><br><br><br>    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+
+    <a href="#top" >Jump to the top</a>
+    
+    <div class="heart-label">Click here to go to my professional page</div>
+    <a href="Html/ResumeSite.html" class="heart-icon">❤️</a>
+    
+    <div class="jokes-label">Click for jokes</div>
+    <a href="Html/fashion.html" class="jokes-icon">💛</a>
+
+</body>
+</html>
